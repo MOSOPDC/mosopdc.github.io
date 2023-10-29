@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MOSOP DC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="project.js"></script>
+  </head>
+  <body>
+  
+  <div id="container">
+    <header class="header">
+      <img src="images/ogoni_flag.png" style="width: 350px; float: left;">
+      <h1>MOVEMENT FOR THE SURVIVAL OF THE OGONI PEOPLE (MOSOP)</h1>
+      <h2>WASHINGTON DC CHAPTER</h2>
+    </header>
+
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" >Home</a>
+    <a href="ogoni.html">Ogoni</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" >Contact</a>
+    <a href="scholarship.html">Scholarship</a>
+    <a href="gallery.html"class="active">Photo Gallery</a>
+    <a href="javascript:void(0);" class="icon">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="row content">
+        <div class="card">
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="images/ogoni_flag.png" style="width:100%" onclick="onClick(this)" alt="Ogoni Flag">
+            <img src="images/mosop_leaders.jpg" style="width:100%" onclick="onClick(this)" alt="Previous MOSOP Leaders">
+            <img src="images/ogoni_ladies.jpg" style="width:100%" onclick="onClick(this)" alt="Ogoni ladies">
+          </div>
+
+          <div class="w3-half">
+            <img src="images/ken.jpg" style="width:100%" onclick="onClick(this)" alt="Ken Saro-Wiwa">
+            <img src="images/nigeria.jpg" style="width:100%" onclick="onClick(this)" alt="Nigeria, our beautiful green country">
+            <img src="images/scholars.jpg" style="width:100%" onclick="onClick(this)" alt="2016-17 Scholarship Winners">
+          </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+          <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption"></p>
+          </div>
+        </div>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <h6>&copy;Kadeh Ikpe</h6>
+  </footer>
+
+
+</div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("myOverlay").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+
+</body>
+</html>
